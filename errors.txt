@@ -2,9 +2,13 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 189: expected statement.
-    @avtaz+=1
-          ^
+File "game/script.rpy", line 135: if statement expects a non-empty block.
+    if crow==1:
+               ^
+
+File "game/script.rpy", line 147: expected statement.
+    else:
+        ^
 
 Ren'Py Version: Ren'Py 8.1.3.23091805
-Sat Oct 21 00:19:39 2023
+Tue Oct 24 22:04:12 2023
