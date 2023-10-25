@@ -232,7 +232,6 @@ label para_3:
     m "Куда же мне сходить поесть сейчас?"
     menu:
         "Булочка из пятерочки":
-            scene hse_k
             m "Классика. {w}Правда, здесь на квартал целых четыре пятерочки."
             m "Те, что справа по курсу, мне не импонируют."
             m "Значит выбор между двумя оставшимися."
@@ -248,13 +247,11 @@ label para_3:
                     m "Я больше не хочу опаздывать, так что не буду рисковать."
                     jump para_4
         "Шаурма на львовке":
-            scene shaurma
             $ avtaz+=1
             m "Говорят крутости этой шаурме нет предела."
             m "Думаю, стоит оценить.{w} Так сказать, проникнуться духом этого места."
             jump para_4
         "Столовая":
-            scene stolovka
             m "Банально, но сейчас нет желания придумывать ничего необычного."
             jump para_4
     return
@@ -411,17 +408,17 @@ label metro:
     return
 label end:
     if (good>=bad) and avtaz<3:
-        scene ending with fade
+        scene end with fade
         m "Ладно, пожалуй, это действительно все." #нужно сделать надписи концовки по центру экрана
         m "…"
         m "Я попрощался со своим новым знакомым и отправился домой."
         m "Вот так и закончился очередной день без отчисления…"
         window hide
-        scene end1
+        scene end
         pause
         return
     if (good<bad) and avtaz<3:
-        scene ending with fade
+        scene end with fade
         m "Ладно, пожалуй, это действительно все."
         m "…"
         m "Я отправился домой."
@@ -436,10 +433,10 @@ label end:
         m "…"
         m "Меня отчислили."
         window hide
-        scene end2
+        scene end
         return
     if avtaz>=3:
-        scene ending with fade
+        scene end with fade
         m "Ладно, пожалуй, это действительно все."
         m "..."
         m "Или нет?"
@@ -474,7 +471,7 @@ label end:
                 m "Неужели меня ждет такой конец…?"
                 window hide
                 pause
-                scene end3 with fade
+                scene end with fade
             "Вмешаться":
                 hide maniac_neutral
                 m "Я должен вмешаться."
@@ -487,5 +484,5 @@ label end:
                 m "Меня стали называть героем. \n{w}Героем автаза…"
                 window hide
                 pause
-                scene end4 with fade
+                scene end with fade
         return

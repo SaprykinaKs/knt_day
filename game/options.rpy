@@ -187,10 +187,6 @@ init python:
     build.classify('**/thumbs.db', None)
 
     ## Чтобы архивировать файлы, классифицируйте их, например, как 'archive'.
-
-    # build.classify('game/**.png', 'archive')
-    # build.classify('game/**.jpg', 'archive')
-
     ## Файлы, соответствующие образцам документации, дублируются в приложениях
     ## Mac, чтобы они появлялись и в приложении, и в zip архиве.
 
