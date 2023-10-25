@@ -1,30 +1,28 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/script.rpy", line 117, in script
-    show crow right
-Exception: Image 'crow' does not accept attributes 'right'.
+  File "game/script.rpy", line 54, in script
+    if late_t81=1:
+SyntaxError: invalid syntax (game/script.rpy, line 54)
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/script.rpy", line 117, in script
-    show crow right
-  File "/Users/kseniasaprykina/Downloads/renpy-8.1.3-sdk/renpy/ast.py", line 1428, in execute
-    show_imspec(self.imspec, atl=getattr(self, "atl", None))
-  File "/Users/kseniasaprykina/Downloads/renpy-8.1.3-sdk/renpy/ast.py", line 1391, in show_imspec
-    renpy.config.show(name,
-  File "/Users/kseniasaprykina/Downloads/renpy-8.1.3-sdk/renpy/exports.py", line 733, in show
-    if not base.find_target() and renpy.config.missing_show:
-  File "/Users/kseniasaprykina/Downloads/renpy-8.1.3-sdk/renpy/display/image.py", line 421, in find_target
-    self.target = target._duplicate(a)
-  File "/Users/kseniasaprykina/Downloads/renpy-8.1.3-sdk/renpy/display/core.py", line 499, in _duplicate
-    args.extraneous()
-  File "/Users/kseniasaprykina/Downloads/renpy-8.1.3-sdk/renpy/display/core.py", line 362, in extraneous
-    raise Exception("Image '{}' does not accept attributes '{}'.".format(
-Exception: Image 'crow' does not accept attributes 'right'.
+  File "game/script.rpy", line 54, in script
+    if late_t81=1:
+  File "C:\Загрузки\renpy-8.1.3-sdk\renpy\ast.py", line 2133, in execute
+    if renpy.python.py_eval(condition):
+  File "C:\Загрузки\renpy-8.1.3-sdk\renpy\python.py", line 1151, in py_eval
+    code = py_compile(code, 'eval')
+  File "C:\Загрузки\renpy-8.1.3-sdk\renpy\python.py", line 1088, in py_compile
+    raise e
+  File "C:\Загрузки\renpy-8.1.3-sdk\renpy\python.py", line 1034, in py_compile
+    raise orig_e
+  File "C:\Загрузки\renpy-8.1.3-sdk\renpy\python.py", line 1027, in py_compile
+    tree = compile(source, filename, py_mode, ast.PyCF_ONLY_AST | flags, 1)
+SyntaxError: invalid syntax (game/script.rpy, line 54)
 
-macOS-14.0-arm64-arm-64bit arm64
+Windows-10-10.0.19045 AMD64
 Ren'Py 8.1.3.23091805
 knt day 1.0
-Fri Oct 20 23:30:37 2023
+Wed Oct 25 02:17:43 2023
